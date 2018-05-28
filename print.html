@@ -1,0 +1,583 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Documentation Club Robot Insa Toulouse</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="_FontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="info.html"><strong aria-hidden="true">2.</strong> Informatique</a></li><li><ol class="section"><li><a href="informatique/mise_en_place.html"><strong aria-hidden="true">2.1.</strong> Mise en place</a></li><li><ol class="section"><li><a href="informatique/mise_en_place/repertoire_de_travail.html"><strong aria-hidden="true">2.1.1.</strong> Répertoire de travail</a></li><li><a href="informatique/mise_en_place/compilation.html"><strong aria-hidden="true">2.1.2.</strong> Compilation</a></li><li><a href="informatique/mise_en_place/ide.html"><strong aria-hidden="true">2.1.3.</strong> IDE</a></li></ol></li></ol></li><li><a href="elec-soft.html"><strong aria-hidden="true">3.</strong> Electronique Logicielle</a></li><li><ol class="section"><li><a href="tools.html"><strong aria-hidden="true">3.1.</strong> Mise en place</a></li><li><ol class="section"><li><a href="tools/ide.html"><strong aria-hidden="true">3.1.1.</strong> IDE</a></li><li><a href="tools/compile.html"><strong aria-hidden="true">3.1.2.</strong> Compilation</a></li><li><a href="tools/repo.html"><strong aria-hidden="true">3.1.3.</strong> Répertoire de travail</a></li></ol></li><li><a href="learn_rust.html"><strong aria-hidden="true">3.2.</strong> Apprendre Rust</a></li><li><a href="repo.html"><strong aria-hidden="true">3.3.</strong> Explication détaillée</a></li><li><ol class="section"><li><a href="explications/structure.html"><strong aria-hidden="true">3.3.1.</strong> Structure générale</a></li><li><a href="explication/communication.html"><strong aria-hidden="true">3.3.2.</strong> Communication</a></li><li><a href="explications/librobot.html"><strong aria-hidden="true">3.3.3.</strong> librobot</a></li><li><a href="explications/elec.html"><strong aria-hidden="true">3.3.4.</strong> elec</a></li></ol></li></ol></li><li><a href="elec-mat.html"><strong aria-hidden="true">4.</strong> Electronique matérielle</a></li><li><ol class="section"><li><a href="elec-mat/tools.html"><strong aria-hidden="true">4.1.</strong> Mise en place</a></li><li><a href="elec-mat/kicad.html"><strong aria-hidden="true">4.2.</strong> Guide d'utilisation de Kicad</a></li><li><a href="elec-mat/production.html"><strong aria-hidden="true">4.3.</strong> Faire tirer sa carte</a></li><li><a href="elec-mat/pcb.html"><strong aria-hidden="true">4.4.</strong> Les différents circuits du Club Robot</a></li><li><ol class="section"><li><a href="elec-mat/power.html"><strong aria-hidden="true">4.4.1.</strong> Puissance</a></li><li><a href="elec-mat/serial.html"><strong aria-hidden="true">4.4.2.</strong> Bus Série</a></li><li><a href="elec-mat/motor.html"><strong aria-hidden="true">4.4.3.</strong> Moteurs &amp; Pont H</a></li><li><a href="elec-mat/servos.html"><strong aria-hidden="true">4.4.4.</strong> ServoMoteurs</a></li><li><a href="elec-mat/brushless.html"><strong aria-hidden="true">4.4.5.</strong> Moteurs Brushless</a></li><li><a href="elec-mat/can.html"><strong aria-hidden="true">4.4.6.</strong> Bus CAN</a></li><li><a href="elec-mat/laser.html"><strong aria-hidden="true">4.4.7.</strong> Capteur Laser</a></li><li><a href="elec-mat/pull.html"><strong aria-hidden="true">4.4.8.</strong> PullUp &amp; PullDown</a></li></ol></li><li><a href="elec-mat/tips&tricks.html"><strong aria-hidden="true">4.5.</strong> Conseils &amp; Astuces pour réussir sa carte</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Documentation Club Robot Insa Toulouse</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><img src="assets/logo.png" alt="" title="test" /></p>
+<a class="header" href="print.html#introduction" id="introduction"><h1>Introduction</h1></a>
+<p>Ce site internet contient la documentation du Club Robot de l'INSA Toulouse pour les parties électronique et informatique du robot.</p>
+<p>Ce livre est rédigé avec <a href="https://github.com/rust-lang-nursery/mdBook">md-book</a>.</p>
+<p>Le but de ce livre est de te guider pour l'installation des différents outils permettant de programmer au Club Robot.</p>
+<p>Ce livre ne documentera pas le code du club, mais peut documenter les différents fichiers d'un projet. Il est là pour servir de référence en cas de problème et de questions vis à vis d'un fichier.</p>
+<p>Sa lecture est préliminaire à la formation organisée en début d'année, et son but est de nous faire gagner du temps en vous faisant installer à la maison les outils de dévellopement.</p>
+<p>Enfin, son écriture a commencé après Chocobot à la coupe de france de 2018 (Robot Cities).</p>
+<p>Pour la suite du &quot;livre&quot;, si on s'est occupé de t'installer linux sur ton ordinateur ou si tu as une version de Ubuntu récente (&gt;16.04) tu peux te considérer comme un utilisateur &quot;standard&quot; et tu n'as pas besoin de suivre les sections pour les <em>power user</em>.</p>
+<p>Si jamais tu trouves des fautes d'orthographes, des erreurs, des remarques ou toutes autres formes de contribution à faire n'hésite <strong>surtout pas</strong>. Les sources de ce livre sont sur <a href="https://github.com/ClubRobotInsat/doc-elec">ce repertoire github</a>, et il n'y a pas besoin de <code>git</code> pour y apporter des modifications simples : l'interface en ligne de github te permet de modifier les fichiers textes et de créer ton premier <em>commit</em> en quelques secondes! Il faut juste penser à demander aux membres du club d'ajouter ton compte dans la liste des utilisateurs autorisés.</p>
+<p>Enfin, la phrase la plus importante en informatique à garder en tête durant toute ta formation :</p>
+<blockquote>
+<p>Le mieux est l'ennemi du bien, surtout au club robot.</p>
+</blockquote>
+<a class="header" href="print.html#informatique" id="informatique"><h1>Informatique</h1></a>
+<a class="header" href="print.html#mise-en-place" id="mise-en-place"><h1>Mise en place</h1></a>
+<p>Dans cette section, nous allons installer pas à pas tous les outils pour pouvoir développer du code dans le pôle informatique du Club Robot.</p>
+<a class="header" href="print.html#répertoire-de-travail" id="répertoire-de-travail"><h1>Répertoire de travail</h1></a>
+<p>La première étape consiste à récupérer l'ensemble du projet informatique du Club.</p>
+<p>On utilise un <a href="https://fr.wikipedia.org/wiki/Logiciel_de_gestion_de_versions">gestionnaire de versions</a> pour manager l'ensemble du code : <a href="https://git-scm.com/">git</a>.</p>
+<p>Ce choix a de très nombreux avantages :</p>
+<ul>
+<li>L'évolution de tout le code est sauvegardée donc on peut rappeler une version antérieure d'un fichier à tout moment</li>
+<li>Si on perd des fichiers ou que l'on se trompe, on peut facilement revenir à un état stable</li>
+<li><code>git</code> permets de collaborer sur un même code, c'est à dire que plusieurs développeurs peuvent participer au code et le logiciel s'occupe de rassembler l'ensemble des modifications</li>
+<li>On peut profiter de tous ces avantages avec très peu de travail supplémentaire</li>
+</ul>
+<a class="header" href="print.html#clonage-du-dépôt" id="clonage-du-dépôt"><h1>Clonage du dépôt</h1></a>
+<a class="header" href="print.html#installation-de-git" id="installation-de-git"><h2>Installation de <code>git</code></h2></a>
+<p>Afin de bénéficier de tous les avantages de <code>git</code>, il n'y a rien de plus simple : il suffit d'exécuter la commande suivante.</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install git
+</code></pre>
+<p><strong><em>Astuce :</em></strong> pour vérifier que l'installation d'une application a bien marché, tu peux appeler la commande <code>which</code> qui te retourne le chemin vers l'exécutable, ou encore l'exécuter avec le flag <code>--version</code> :</p>
+<pre><code class="language-bash">$ which git
+/usr/bin/git
+
+$ git version
+git version 2.11.0
+</code></pre>
+<p><code>git</code> est un logiciel extrêmement pratique une fois qu'on l'a pris en main, alors voici ton premier travail à la maison : <a href="https://try.github.io/levels/1/challenges/1">apprendre à utiliser <code>git</code> en ligne en 15 minutes</a>.</p>
+<a class="header" href="print.html#téléchargement-du-dépôt" id="téléchargement-du-dépôt"><h2>Téléchargement du dépôt</h2></a>
+<p>A présent, on va <code>clone</code>r le repo info du Club. Il est actuellement privé, donc pense à demander à un membre son accès !</p>
+<p>Je te conseille de te créer un dossier qui va regrouper tous les dépôts du Club, par exemple :</p>
+<pre><code class="language-bash">mkdir -p ~/Programs/ClubRobot
+cd ~/Programs/ClubRobot
+</code></pre>
+<a class="header" href="print.html#méthode-simple-avec-https" id="méthode-simple-avec-https"><h3>Méthode simple avec HTTPS</h3></a>
+<p>Le clonage en HTTPS est le plus simple et le plus couramment utilisé. Il ne demande que le lien vers le dépôt pour le cloner, et lorsqu'une authentification est requise (clone d'un dépôt privé, push, ...) il faut entrer son identifiant du serveur git (dans notre cas, <a href="https://github.com">github.com</a>) ainsi que son mot de passe.</p>
+<p>Voici comment récupérer le code :</p>
+<pre><code class="language-bash">git clone https://&lt;ton_login_github&gt;@github.com/ClubRobotInsat/info.git
+cd info
+</code></pre>
+<a class="header" href="print.html#méthode-alternative-avec-ssh" id="méthode-alternative-avec-ssh"><h3>Méthode alternative avec SSH</h3></a>
+<p><a href="https://github.com">github.com</a> propose une autre fonctionnalité accéder au serveur par <a href="https://fr.wikipedia.org/wiki/Secure_Shell">SSH</a>. La mise en place de cette méthode est un peu plus longue que le simple protocole HTTPS, mais ça te permettra de t'affranchir de devoir entrer ton mot de passe et ton identifiant à chaque intéraction avec le serveur.</p>
+<p>Je te laisse suivre les <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">instructions détaillées</a> pour ajouter la clef SSH sur github.</p>
+<p>Enfin, voici comment récupérer le code :</p>
+<pre><code class="language-bash">git clone git@github.com:ClubRobotInsat/info.git
+cd info
+</code></pre>
+<hr />
+<p>Félicitations, te voilà possesseur de tout le savoir informatique du Club !</p>
+<a class="header" href="print.html#compilation" id="compilation"><h1>Compilation</h1></a>
+<p>Dans cette section, nous allons t'installer tous les outils qui te permettront de compiler le projet informatique.</p>
+<a class="header" href="print.html#logiciels-nécessaires" id="logiciels-nécessaires"><h2>Logiciels nécessaires</h2></a>
+<p>On utilise les outils suivants :</p>
+<ul>
+<li><code>git</code> : gestionnaire de versions pour le code, que tu as déjà dû installer</li>
+<li><code>cmake</code> : grâce aux différents <code>CMakeLists.txt</code>, le projet se compile très facilement en invoquant <code>cmake</code> puis <code>make</code> (nous verrons plus tard comment utiliser cet outil)</li>
+<li><code>clang-format</code> : cet utilitaire permets d'homogéniser tout le code pour qu'il respecte la même norme d'écriture</li>
+<li><code>libbox2d-dev</code>, <code>libirrlicht1.8</code> : ces librairies permettent d'utiliser le simulateur du club</li>
+</ul>
+<p>Heureusement, un script s'occupe d'installer tous ces outils et d'autres encore pour assurer la compilation sans erreur du projet. Voici comment l'appeler (en considérant que vous êtes dans le dossier <code>info</code>):</p>
+<pre><code class="language-bash">scripts/install.sh tools
+</code></pre>
+<a class="header" href="print.html#applications-recommandées" id="applications-recommandées"><h2>Applications recommandées</h2></a>
+<a class="header" href="print.html#formattage-du-code" id="formattage-du-code"><h3>Formattage du code</h3></a>
+<p>Un <em>hook</em> permets de lancer un script à chaque commit pour formater le code comme il faut :</p>
+<pre><code class="language-bash">scripts/install.sh format
+</code></pre>
+<a class="header" href="print.html#gcc-recent-en-tant-que-compilateur" id="gcc-recent-en-tant-que-compilateur"><h3><em>gcc</em> recent en tant que compilateur</h3></a>
+<a class="header" href="print.html#version-6" id="version-6"><h4>version 6</h4></a>
+<pre><code class="language-bash">sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install gcc-6 g++-6
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
+</code></pre>
+<a class="header" href="print.html#version-7" id="version-7"><h4>version 7</h4></a>
+<p>Si vous êtes sur Ubuntu 17.04 (ou plus récent) :</p>
+<pre><code class="language-bash">sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+</code></pre>
+<p>Sinon :</p>
+<pre><code class="language-bash">sudo add-apt-repository ppa:jonathonf/gcc-7.1
+</code></pre>
+<p>Puis :</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install gcc-7 g++-7
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 --slave /usr/bin/g++ g++ /usr/bin/g++-7
+</code></pre>
+<a class="header" href="print.html#autres-installations" id="autres-installations"><h2>Autres installations</h2></a>
+<a class="header" href="print.html#lib-wiimote" id="lib-wiimote"><h3>Lib Wiimote</h3></a>
+<p>Si tu veux pouvoir contrôler le robot à l'aide d'une WiiMote, il faut installer la librairie <code>WiiC</code> nécessaire aux démos :</p>
+<pre><code class="language-bash">scripts/install.sh wii
+</code></pre>
+<a class="header" href="print.html#clang-en-tant-que-compilateur" id="clang-en-tant-que-compilateur"><h3><em>Clang</em> en tant que compilateur</h3></a>
+<p>Si tu veux utiliser un autre compilateur par défaut (<code>[clang](https://clang.llvm.org/)</code>), voici les commandes à utiliser :</p>
+<pre><code class="language-bash">sudo apt-get install clang-3.8
+sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++-3.8 100
+</code></pre>
+<p>Cependant, tous les membres actuels utilisent <code>gcc</code> par défaut.</p>
+<a class="header" href="print.html#petrilab" id="petrilab"><h3>Petrilab</h3></a>
+<p>Ce logiciel permets d'éditer des <a href="https://fr.wikipedia.org/wiki/R%C3%A9seau_de_Petri">réseaux de Petri</a>. Il a été développé en interne par <a href="https://github.com/rems4e">rems4e</a> et il nous permets de créer graphiquement des stratégies.</p>
+<p>Son installation actuelle est vouée à évoluer prochainement pour le plus avoir les fichiers binaires directement dans le dépôt git, et les systèmes d'exploitation pris en charge pour le moment sont les suivants :</p>
+<ul>
+<li>Ubuntu 14.04 <code>Trusty</code></li>
+<li>Ubuntu 16.04 <code>Xenial</code></li>
+<li>Ubuntu 17.04 <code>Zesty</code></li>
+</ul>
+<p>Pour avoir des informations sur ton OS, utilise la commande <code>lsb_release --all</code> ; s'il correspond à ceux disponibles, alors tu peux simplement appeler le script d'installation :</p>
+<pre><code class="language-bash">scripts/install.sh petri
+</code></pre>
+<a class="header" href="print.html#problèmes-de-compilation-connus" id="problèmes-de-compilation-connus"><h2>Problèmes de compilation connus</h2></a>
+<ul>
+<li>Problème de <em>clock skew</em> ? Il suffit de lancer <code>find -exec touch \{\} \;</code> dans le dossier <code>info</code>. Attention, cela peut être un petit peu long.</li>
+</ul>
+<a class="header" href="print.html#ide" id="ide"><h1>IDE</h1></a>
+<p>Comme tu as pu le constater, l'arborescence du code est assez complexe et il y a beaucoup de fichiers. Pour coder facilement, il existe des outils qui nous facilitent la vie : les <a href="https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement">environnements de dévelopement</a>, ou encore des IDE.</p>
+<p>Dans ce guide, nous installerons un IDE pour le langage <a href="https://isocpp.org/">C++</a> qui est le langage utilisé pour la partie informatique du robot. Notre choix se porte sur CLion qui est développé par JetBrains. Il s'agit d'un IDE à la fois flexible, simple d'utilisation, multiplateforme et qui a la particularité d'utiliser nativement <a href="https://cmake.org/">CMake</a>, le système de build utilisé par notre code.</p>
+<p>Cet IDE est normalement payant, mais une version d'éducation (licence valide 1 an, renouvelable tant que l'on est étudiant) est disponible.</p>
+<a class="header" href="print.html#téléchargement-de-lide" id="téléchargement-de-lide"><h3>Téléchargement de l'IDE</h3></a>
+<p>Pour commencer, il faut :</p>
+<ol>
+<li>Se rendre sur la page de <a href="https://www.jetbrains.com/clion/download/">CLion</a> et télécharger la dernière version.</li>
+<li>Pendant le téléchargement, aller sur la page de <a href="https://www.jetbrains.com/shop/eform/students">jetbrains.com</a> pour demander une licence éducation. L'adresse mail à fournir est celle de l'INSA (<em><mail>@etud.insa-toulouse.fr</em>) pour que JetBrains accepte de délivrer la licence.</li>
+<li>Va voir ta boîte mail, un message contenant un lien de confirmation est arrivé : confirme ton adresse mail</li>
+<li>Tu reçois enfin un autre mail avec les infos de la licence, qu'il faudra saisir dans CLion</li>
+</ol>
+<a class="header" href="print.html#lancement" id="lancement"><h3>Lancement</h3></a>
+<p>Une fois le téléchargement terminé, il ne reste plus qu'à configurer ton ordinateur pour exécuter l'IDE :</p>
+<ol>
+<li>Il faut extraire l'archive téléchargée sur le site de CLion et copier le dossier <code>&lt;clion-version&gt;</code> dans <code>/opt/clion</code>:
+<pre><code class="language-bash">cd ~/Downloads
+tar -xvf &lt;nom de l'archive d'installation&gt;
+sudo cp &lt;nom du dossier extrait&gt; /opt/clion -R
+</code></pre>
+</li>
+<li>On renomme le script de lancement <code>clion.sh</code> en <code>clion</code> parce que c'est plus joli (selon mes goûts, j'aime aussi le orange si jamais).
+<pre><code class="language-bash">sudo mv /opt/clion/bin/clion.sh /opt/clion/bin/clion
+</code></pre>
+</li>
+<li>Il faut maintenant ajouter le script de lancement de Clion à ta <a href="https://fr.wikipedia.org/wiki/Variable_d%27environnement">variable d'environnement</a> <code>$PATH</code>:
+<pre><code class="language-bash">echo &quot;export PATH=/opt/clion/bin:$PATH&quot; &gt; ~/.bashrc
+</code></pre>
+Le <code>PATH</code> est une variable d'environnement qui contient une suite de chemins séparés par des deux points <code>:</code>.
+La ligne ci-dessus concatène lors de l'ouverture d'un terminal <strong>bash</strong> à la variable <code>PATH</code> le chemin de lancement de CLion.</li>
+<li>Tu peux maintenant ouvrir un terminal et taper :
+<pre><code class="language-bash">clion
+</code></pre>
+Ou, si jamais tu n'a pas suivi l'étape de renommage :
+<pre><code class="language-bash">clion.sh
+</code></pre>
+</li>
+</ol>
+<p><strong><em>Pour les utilisateurs d'un Ubuntu standard :</em></strong> Lorsque CLion est en cours d'exécution, son icône est affiché dans la barre des tâches à gauche. Pour le lancer plus rapidement, il te suffit de faire un click droit sur l'icône -&gt; 'Lock to Launcher'</p>
+<p>Si jamais l'IDE se lance, tu viens d'installer avec succès CLion ! Sinon je t'encourage à venir montrer le message d'erreur aux gens du club.</p>
+<a class="header" href="print.html#configuration-spécifiques-au-club-robot" id="configuration-spécifiques-au-club-robot"><h2>Configuration spécifiques au Club Robot</h2></a>
+<p>Il ne reste plus qu'une étape et la configuration de ton IDE sera totalement fonctionnelle.</p>
+<p>Dans le menu <code>File -&gt; Settings</code>, dérouler l'item <code>Build, Execution, Deployment</code> et sélectionner <code>CMake</code>. Il faut ensuite remplir certains champs :</p>
+<ul>
+<li>dans <code>CMake options</code>, mettre le texte <code>-DDEBUG=on</code> : on spécifie à <code>CMake</code> des flags supplémentaires qui sont utilisés par le projet</li>
+<li>dans <code>Generation path</code>, mettre le texte <code>build</code></li>
+<li>dans <code>Build options</code>, mettre le texte <code>-j 4</code> : on compile avec 4 coeurs (ou 8 si ton processeur en a 8)</li>
+</ul>
+<p>Enfin, pour pouvoir tester les IA via la liaison série (<a href="https://fr.wikipedia.org/wiki/RS-232">RS232</a>) en utilisant CLion, et sans nécessiter les droits <code>root</code>, il faut ajouter ton utilisateur au groupe ayant accès à la liaison série <code>dialout</code> :</p>
+<pre><code class="language-bash">sudo usermod -a -G dialout &lt;NOM_UTILISATEUR&gt;
+</code></pre>
+<a class="header" href="print.html#test-de-lenvironnement-de-travail" id="test-de-lenvironnement-de-travail"><h2>Test de l'environnement de travail</h2></a>
+<p>A présent que ton ordinateur est totalement configuré, il est temps de compiler le code !</p>
+<p>L'interface de CLion peut paraître compliquée de prime abord, c'est pourquoi il ne faut pas hésiter à demander de l'aide à un membre du Club.</p>
+<p>Une des fonctionnalités les plus utilisées est celle de la compilation intégrée. Pour cela, en haut à droite de la fenêtre, choisis la target <code>BuildAll</code>. Comme tu peux le voir, de nombreuses applications peuvent être compilées, et on veut actuellement s'assurer que tout compile chez toi. Ensuite, appuie sur le bouton à gauche de la liste déroulante pour compiler. Attention, ça va prendre un peu de temps.</p>
+<p align="center">
+<img src="../../../assets/BuildAll.png" alt="CLion et sa fonctionnalité BuildAll">
+</p>
+<p>Si il n'y a pas de messages d'erreur, <strong><em>BRAVO</em></strong> tu viens d'installer avec succès tout l'environnement de travail !</p>
+<p>Sinon, je te conseille de te rapprocher d'un membre du pôle informatique.</p>
+<a class="header" href="print.html#electronique-logicielle" id="electronique-logicielle"><h1>Electronique Logicielle</h1></a>
+<a class="header" href="print.html#mise-en-place-1" id="mise-en-place-1"><h1>Mise en place</h1></a>
+<p>Dans cette section, nous allons installer pas à pas tous les outils pour pouvoir développer du code pour le robot.</p>
+<a class="header" href="print.html#ide-1" id="ide-1"><h1>IDE</h1></a>
+<p>Pour coder facilement, le plus simple est d'installer un IDE (ou encore <a href="https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement">environnement de dévelopement</a>).</p>
+<p>Dans ce guide nous installerons un IDE pour le langage <a href="https://www.rust-lang.org/fr-FR/">Rust</a> qui est le langage utilisé pour la partie électronique du robot.
+Nous allons installer un IDE Intellij pour un autre langage comme Java ou C++ et nous rajouterons par dessus un plugin pour le support de Rust.</p>
+<p>Un bon résumé du support du langage pour la plupart des éditeurs de texte est disponible <a href="https://areweideyet.com/">ici</a>, n'hésites pas à te faire ton setup personnalisé !</p>
+<a class="header" href="print.html#installation-de-clion" id="installation-de-clion"><h2>Installation de CLion</h2></a>
+<p>Nous allons installer <a href="https://www.jetbrains.com/clion/">CLion</a>, un IDE développé par JetBrains pour C++. Tu pourras donc aussi utiliser CLion pour jeter un oeil à la partie informatique du robot !</p>
+<p>Il est normalement payant, mais une version d'éducation (licence valide 1 an, renouvelable tant que l'on est étudiant) est disponible.</p>
+<a class="header" href="print.html#téléchargement-de-lide-1" id="téléchargement-de-lide-1"><h3>Téléchargement de l'IDE</h3></a>
+<p>Pour commencer, il faut :</p>
+<ol>
+<li>Se rendre sur la page de <a href="https://www.jetbrains.com/clion/download/">CLion</a> et télécharger la dernière version.</li>
+<li>Pendant le téléchargement, aller sur la page de <a href="https://www.jetbrains.com/shop/eform/students">jetbrains.com</a> pour demander une licence éducation. L'adresse mail à fournir est celle de l'INSA (<em><mail>@etud.insa-toulouse.fr</em>) pour que JetBrains accepte de délivrer la licence.</li>
+<li>Va voir ta boîte mail, un message contenant un lien de confirmation est arrivé : confirme ton adresse mail</li>
+<li>Tu reçois enfin un autre mail avec les infos de la licence, qu'il faudra saisir dans CLion</li>
+</ol>
+<a class="header" href="print.html#lancement-1" id="lancement-1"><h3>Lancement</h3></a>
+<p>Une fois le téléchargement terminé, il ne reste plus qu'à configurer ton ordinateur pour exécuter l'IDE :</p>
+<ol>
+<li>Il faut extraire l'archive téléchargée sur le site de CLion et copier le dossier <code>&lt;clion-version&gt;</code> dans <code>/opt/clion</code>:
+<pre><code class="language-bash">cd ~/Downloads
+tar -xvf &lt;nom de l'archive d'installation&gt;
+sudo cp &lt;nom du dossier extrait&gt; /opt/clion -R
+</code></pre>
+</li>
+<li>On renomme le script de lancement <code>clion.sh</code> en <code>clion</code> parce que c'est plus joli (selon mes goûts, j'aime aussi le orange si jamais).
+<pre><code class="language-bash">sudo mv /opt/clion/bin/clion.sh /opt/clion/bin/clion
+</code></pre>
+</li>
+<li>Il faut maintenant ajouter le script de lancement de Clion à ta <a href="https://fr.wikipedia.org/wiki/Variable_d%27environnement">variable d'environnement</a> <code>$PATH</code>:
+<pre><code class="language-bash">echo &quot;export PATH=/opt/clion/bin:$PATH&quot; &gt; ~/.bashrc
+</code></pre>
+Le <code>PATH</code> est une variable d'environnement qui contient une suite de chemins séparés par des deux points <code>:</code>.
+La ligne ci-dessus concatène lors de l'ouverture d'un terminal <strong>bash</strong> à la variable <code>PATH</code> le chemin de lancement de CLion.</li>
+<li>Tu peux maintenant ouvrir un terminal et taper :
+<pre><code class="language-bash">clion
+</code></pre>
+Ou, si jamais tu n'a pas suivi l'étape de renommage :
+<pre><code class="language-bash">clion.sh
+</code></pre>
+</li>
+</ol>
+<p><strong><em>Pour les utilisateurs d'un Ubuntu standard :</em></strong> Lorsque CLion est en cours d'exécution, son icône est affiché dans la barre des tâches à gauche. Pour le lancer plus rapidement, il te suffit de faire un click droit sur l'icône -&gt; 'Lock to Launcher'</p>
+<p>Si jamais l'IDE se lance, tu viens d'installer avec succès CLion ! Sinon je t'encourage à venir montrer le message d'erreur aux gens du club.</p>
+<a class="header" href="print.html#installation-du-plugin-pour-rust" id="installation-du-plugin-pour-rust"><h2>Installation du plugin pour Rust</h2></a>
+<p>Il faut commencer par ouvrir les options de CLion <code>File&gt;Settings</code> ou encore <code>ctrl+alt+s</code>.</p>
+<p>Dans le menu <code>Plugins</code> tu cliques sur <code>Install Jetbrains Plugins</code> et tu cherchers <code>Rust</code> dans la fenêtre qui s'est ouverte. Pour lancer l'installation, il suffit de cliquer sur <code>Install</code>.</p>
+<a class="header" href="print.html#verification-de-linstallation" id="verification-de-linstallation"><h2>Verification de l'installation</h2></a>
+<p>Si il n'y a pas de messages d'erreur, <strong><em>BRAVO</em></strong> tu viens d'installer avec succès CLion !</p>
+<a class="header" href="print.html#compilation-1" id="compilation-1"><h1>Compilation</h1></a>
+<p>Dans cette section nous allons te guider pour l'installation de tous les outils qui te permettront de compiler le projet pour le microcontrôleur.</p>
+<a class="header" href="print.html#outils-génériques" id="outils-génériques"><h1>Outils génériques</h1></a>
+<p>Nous allons tout d'abord installer les outils suivantes :</p>
+<ul>
+<li><code>git</code> : gestionnaire de versions pour le code</li>
+<li><code>gdb-arm-none-eabi</code> : <code>gdb</code> est un débuggeur, on installe ici la version pour l'architecture <code>arm</code> sans os (<code>none</code>). Tu trouveras plus d'informations sur gdb par <a href="https://fr.wikipedia.org/wiki/GNU_Debugger">ici</a>. Pour les notions d'architecture, tu peux toujours lire la page sur l'<a href="https://fr.wikipedia.org/wiki/Architecture_de_processeur">architecture matérielle</a> sur wikipédia.</li>
+<li><code>gcc-arm-none-eabi</code> : <code>gcc</code> est un compilateur pour le langage C. Le paquet du compilateur vient aussi avec un linker (ou <a href="https://fr.wikipedia.org/wiki/%C3%89dition_de_liens">éditeur de lien</a>) qui est nécessaire pour obtenir un exécutable final. On installe là le paquet qui nous fournit un éditeur de lien pour l'architecture du microcontrôleur (<em>arm</em>).</li>
+<li><code>gcc-6-multilib</code> ou <code>gcc-7-multilib</code> : on a aussi besoin de l'éditeur de lien pour notre architecture d'ordinateur.</li>
+<li><code>openocd</code> : cet outil permet de communiquer avec le microcontrôleur.</li>
+</ul>
+<p>Pour cela, il te suffit d'exécuter dans un terminal :</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install git gdb-arm-none-eabi gcc-arm-none-eabi gcc-6-multilib openocd
+</code></pre>
+<p>La première commande mets à jour les paquets disponibles, la deuxième les installe.</p>
+<a class="header" href="print.html#customisation-de-gdb" id="customisation-de-gdb"><h2>Customisation de gdb</h2></a>
+<p>Bien que très puissant, gdb propose une interface d'un autre siècle. On va rendre cette interface plus agréable.</p>
+<ol>
+<li>On récupère un fichier tout fait qui rend l'interface de gdb supportable :
+<pre><code class="language-bash">wget -P ~ git.io/.gdbinit
+</code></pre>
+</li>
+<li>On autorise le chargement de ce fichier par gdb :
+<pre><code class="language-bash">echo &quot;set auto-load safe-path /&quot; &gt;&gt; ~/.gdbinit
+</code></pre>
+</li>
+</ol>
+<a class="header" href="print.html#rust" id="rust"><h1>Rust</h1></a>
+<p>Pour installer rust, tu peux te référer aux instructions sur <a href="https://rustup.rs">rustup.rs</a>. Les paramètres par défaut sont très bien.
+Si tu as bien installé Rust, quand tu ouvres un nouveau terminal et que tu tapes :</p>
+<pre><code class="language-bash">rustc --version
+</code></pre>
+<p>Il devrait s'afficher un texte qui ressemble à ça :</p>
+<pre><code class="language-bash">rustc 1.25.0-nightly (b5392f545 2018-01-08)
+</code></pre>
+<a class="header" href="print.html#utilitaires" id="utilitaires"><h1>Utilitaires</h1></a>
+<p>Pour travailler plus efficacement, nous allons aussi installer quelques outils.</p>
+<a class="header" href="print.html#obligatoire--rustfmt" id="obligatoire--rustfmt"><h2>Obligatoire : rustfmt</h2></a>
+<p>Dans un projet informatique, plusieurs personnes ont des conventions d'alignement du texte différent, différentes manières d'aller à la ligne dans les déclarations, etc.
+Dans le but d'uniformiser le code produit par tout le monde, on utilise un outil <a href="https://github.com/rust-lang-nursery/rustfmt">rustfmt</a> qui va venir formatter le code. Plus besoin de se prendre la tête avec l'indentation ou les retours à la ligne dans les gros appels de fonctions : on lance <code>rustfmt</code> et le code est formaté.</p>
+<p>Cet outil est <strong>obligatoire</strong>, autrement ton installation ne fonctionnera pas. Pour l'installer il suffit de taper dans un terminal :</p>
+<pre><code class="language-bash">rustup component add rustfmt-preview
+</code></pre>
+<a class="header" href="print.html#optionnel--cargo-edit" id="optionnel--cargo-edit"><h2>Optionnel : cargo-edit</h2></a>
+<p>L'outil <code>cargo-edit</code> permet d'ajouter facilement des librairies depuis la ligne de commande dans un projet. Pour plus d'informations tu peux aller lire la description de l'outil par <a href="https://crates.io/crates/cargo-edit">ici</a>.</p>
+<pre><code class="language-bash">cargo install cargo-edit
+</code></pre>
+<a class="header" href="print.html#optionnel-cargo-clone" id="optionnel-cargo-clone"><h2>Optionnel cargo-clone</h2></a>
+<p>L'outil <code>cargo-clone</code> permet de récuperer le code source de n'importe quelle librairie disponible sur <a href="https://crates.io">crates.io</a> en une ligne de commande.</p>
+<pre><code class="language-bash">cargo install cargo-clone
+</code></pre>
+<a class="header" href="print.html#répertoire-de-travail-1" id="répertoire-de-travail-1"><h1>Répertoire de travail</h1></a>
+<p>Nous allons maintenant ouvrir le projet du club robot avec CLion et vérifier que tout fonctionne.</p>
+<a class="header" href="print.html#récuperer-le-code-de-la-librairie" id="récuperer-le-code-de-la-librairie"><h1>Récuperer le code de la librairie</h1></a>
+<p>Pour récuperer le code, je te suggère de commencer par te créer un dossier qui contiendra tous les répertoires du club robot (si ce n'est pas déjà fait).
+Une fois placé dans ce dossier, tu peux exécuter la commande :</p>
+<pre><code class="language-bash">git clone https://github.com/ClubRobotInsat/librobot
+</code></pre>
+<p>Cette commande va venir demander à <code>git</code> d'aller récupérer la dernière version du code disponible sur <a href="https://github.com/ClubRobotInsat/librobot">github</a> pour la librairie du club robot.</p>
+<p>Un nouveau dossier <code>librobot</code> a du apparaître.</p>
+<p>C'est le moment de lancer CLion ! Une fois lancé, dans <code>File &gt; Open</code> choisi le dossier de <code>librobot</code>.</p>
+<p>Si tout se passe bien, tu devrais pouvoir compiler, tester et formater le code. Pour cela, il faut choisir la configuration adéquate, en haut à droite de ton interface et appuyer sur le bouton run.</p>
+<p>Si la compilation fonctionne, tu peux passer à la suite !</p>
+<p><strong><em>TODO : screenshot</em></strong></p>
+<a class="header" href="print.html#récuperer-le-code-de-la-carte-electronique" id="récuperer-le-code-de-la-carte-electronique"><h1>Récuperer le code de la carte electronique</h1></a>
+<p>De même, il faut cloner un répertoire sur github pour avoir le code de la carte electronique :</p>
+<pre><code class="language-bash">git clone https://github.com/ClubRobotInsat/elec
+</code></pre>
+<p>Il y a quelques étapes de configuration à faire avant de compiler :</p>
+<ol>
+<li>
+<p>Il faut rajouter la cible <code>thumbv7m-none-eabihf</code> avec rustup</p>
+<pre><code class="language-bash">cd elec
+rustup target add thumbv7m-none-eabihf
+</code></pre>
+</li>
+<li>
+<p>Il faut vérifier que le projet compile bien :</p>
+<pre><code class="language-bash">cargo build
+</code></pre>
+</li>
+</ol>
+<p>Explication :</p>
+<ul>
+<li>
+<p><code>thumbv7m</code> : jeu d'instruction ARMv7, il s'agit du jeu d'instruction du Cortex M4</p>
+</li>
+<li>
+<p><code>none</code> : pas de système d'exploitation sur la carte électronique</p>
+</li>
+<li>
+<p><code>eabihf</code> : <code>hf</code> veut dire &quot;hard float&quot;, c'est à dire que le compilateur va émettre des instructions spéciales pour les calculs sur les nombres flottants au lieu de les calculer avec des entiers. En effet, le microcontrolleur <code>stm32f446</code> embarque un Floating Point Unit (FPU) qui permet de faire des calculs flottants rapidement.</p>
+</li>
+</ul>
+<p>Si la compilation a marché alors tout a été installé correctement !</p>
+<a class="header" href="print.html#arborescence-du-code-et-fichiers-remarquables" id="arborescence-du-code-et-fichiers-remarquables"><h1>Arborescence du code et fichiers remarquables</h1></a>
+<p>Il y a quelques fichiers remarquables dans le dossier <code>librobot</code> :</p>
+<ul>
+<li><code>.travis.yml</code> :  ce fichier décrit les étapes que doit faire le serveur d'intégration continue pour tester les commits et déployer la documentation.</li>
+<li><code>Cargo.toml</code> : ce fichier décrit les dépendances du projet.</li>
+<li><code>README.md</code> : il s'agit du README qui s'affiche sur <a href="https://github.com/ClubRobotInsat/librobot">github</a> quand on regarde le projet.</li>
+<li><code>.idea/</code> : le dossier contenant les fichiers de configuration de l'IDE.</li>
+<li><code>.git/</code> : le dossier contenant les fichiers de configuration de git.</li>
+<li><code>.gitignore</code> : un fichier qui décrit tout ce que <code>git</code> doit ignorer.</li>
+</ul>
+<a class="header" href="print.html#apprendre-rust" id="apprendre-rust"><h1>Apprendre Rust</h1></a>
+<p>Pour apprendre Rust, en parallèle avec la formation il faut lire <a href="https://doc.rust-lang.org/book/second-edition/">The Rust Book</a> (deuxième édition). Il s'agit du meilleur moyen d'apprendre le langage, mais ce n'est pas le seul.</p>
+<p>Voici une liste de ressources non exhaustive qui te servira un jour :</p>
+<ul>
+<li><a href="https://doc.rust-lang.org/book/">The Rust Book v1</a> : A lire si le chapitre que tu cherches n'est pas dans la v2. Le livre n'est pas obsolète, mais il est moins bien que la v2.</li>
+<li><a href="http://rustbyexample.com/">Rust by example</a> : Une collection d'exemples permettant de comprendre les concepts du langage, très bonne lecture en complément de <em>The Rust Book</em>.</li>
+<li><a href="https://rust-lang-nursery.github.io/rust-cookbook/">The Cookboook</a> : Un livre de <em>recettes</em> pour des opérations classiques.</li>
+<li><a href="https://doc.rust-lang.org/std/">La documentation de la librairie standard</a> : La référence de toutes les fonctions/structures/traits/méthodes de la librairie standard.</li>
+</ul>
+<p>Il existe aussi une série de posts de blogs, c'est toujours pratique pour apprendre surtout quand c'est en Français :</p>
+<ul>
+<li><a href="http://blog.guillaume-gomez.fr/Rust">Tutoriel Rust</a> - Guillaume Gomez</li>
+<li><a href="https://levans.fr/borrowing-and-lifetimes-in-rust-fr.html">Les emprunts et les durées de vies en Rust</a> - Victor Berger</li>
+<li><a href="https://github.com/Songbird0/Rust_FAQ">Retrouvez un grand nombre de Questions/Réponses dans cette FAQ dédiée à rust !</a> - Anthony Defranceschi/Songbird0</li>
+<li><a href="https://github.com/Songbird0/FR_RBE">Traduction française du livre Rust by example</a> - Anthony Defranceschi/Songbird0</li>
+</ul>
+<p>Enfin il y a une <a href="https://github.com/ctjhoa/rust-learning">page github</a> qui recense encore plus de ressources que tu peux toujours consulter.</p>
+<p>Pour la programmation embarquée il y a aussi de la documentation, la plupart est recensée sur <a href="https://github.com/rust-embedded/awesome-embedded-rust">awesome-embedded</a>.</p>
+<p>Il y enfin quelques posts de blogs bien pratiques, ainsi que de la documentation de certaines librairies :</p>
+<ul>
+<li><a href="https://japaric.github.io/discovery/">Une série de post d'introduction sur un stm32discovery</a> - Japaric</li>
+<li><a href="http://blog.japaric.io/quickstart/">Un post qui date des débuts de Rust sur microcontrolleur</a> - Japaric</li>
+<li><a href="http://blog.japaric.io/fearless-concurrency/">Introduction au framework RTFM</a> - Japaric</li>
+<li><a href="http://blog.japaric.io/rtfm-v2/">Evolution du framework RTFM</a> - Japaric</li>
+<li><a href="https://docs.rs/cortex-m-quickstart/0.3.1/cortex_m_quickstart/">La description de la librairie <code>cortex-m-quickstart</code></a></li>
+<li><a href="https://docs.rs/embedded-hal/0.2.1/embedded_hal/">La description de la librairie <code>embedded-hal</code></a></li>
+</ul>
+<a class="header" href="print.html#aide" id="aide"><h1>Aide</h1></a>
+<p>Tu as besoin d'aide ?
+Le meilleur moyen de résoudre ton problème est d'aller sur le chan <strong>#rust-beginners</strong> sur le <a href="irc.mozilla.org">serveur IRC</a> de Mozilla.
+Si tu n'as pas de client IRC, tu peut aussi passer par une <a href="https://client00.chat.mibbit.com/?server=irc.mozilla.org&amp;channel=%23rust-beginners">interface web</a>.</p>
+<p>Pour des questions plus complexes, tu peut aussi poster sur reddit ou demander aux gens du club ! :wink:</p>
+<a class="header" href="print.html#détail-des-différents-repoo" id="détail-des-différents-repoo"><h1>Détail des différents repoo</h1></a>
+<a class="header" href="print.html#structure-générale" id="structure-générale"><h1>Structure générale</h1></a>
+<a class="header" href="print.html#communication-éléctroniqueinformatique" id="communication-éléctroniqueinformatique"><h1>Communication éléctronique/Informatique</h1></a>
+<a class="header" href="print.html#librobot" id="librobot"><h1>librobot</h1></a>
+<a class="header" href="print.html#elec" id="elec"><h1>elec</h1></a>
+<a class="header" href="print.html#electronique-matérielle" id="electronique-matérielle"><h1>Electronique matérielle</h1></a>
+<a class="header" href="print.html#mise-en-place-2" id="mise-en-place-2"><h1>Mise en place</h1></a>
+<a class="header" href="print.html#guide-dutilisation-de-kicad" id="guide-dutilisation-de-kicad"><h1>Guide d'utilisation de Kicad</h1></a>
+<a class="header" href="print.html#faire-tirer-sa-carte" id="faire-tirer-sa-carte"><h1>Faire tirer sa carte</h1></a>
+<a class="header" href="print.html#les-différents-circuits-du-club-robot" id="les-différents-circuits-du-club-robot"><h1>Les différents circuits du Club Robot</h1></a>
+<a class="header" href="print.html#puissance" id="puissance"><h1>Puissance</h1></a>
+<a class="header" href="print.html#série" id="série"><h1>Série</h1></a>
+<a class="header" href="print.html#moteur" id="moteur"><h1>Moteur</h1></a>
+<a class="header" href="print.html#servomoteurs" id="servomoteurs"><h1>ServoMoteurs</h1></a>
+<a class="header" href="print.html#moteurs-brushless" id="moteurs-brushless"><h1>Moteurs Brushless</h1></a>
+<a class="header" href="print.html#bus-can" id="bus-can"><h1>Bus CAN</h1></a>
+<a class="header" href="print.html#capteur-laser" id="capteur-laser"><h1>Capteur Laser</h1></a>
+<a class="header" href="print.html#pullup--pulldown" id="pullup--pulldown"><h1>PullUp &amp; PullDown</h1></a>
+<a class="header" href="print.html#conseils--astuces-pour-réussir-sa-carte" id="conseils--astuces-pour-réussir-sa-carte"><h1>Conseils &amp; Astuces pour réussir sa carte</h1></a>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                window.print();
+            })
+        </script>
+        
+
+        
+
+        
+        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+    </body>
+</html>

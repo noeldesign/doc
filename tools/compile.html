@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Compilation - Documentation Club Robot Insa Toulouse</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="../">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="_FontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="info.html"><strong aria-hidden="true">2.</strong> Informatique</a></li><li><ol class="section"><li><a href="informatique/mise_en_place.html"><strong aria-hidden="true">2.1.</strong> Mise en place</a></li><li><ol class="section"><li><a href="informatique/mise_en_place/repertoire_de_travail.html"><strong aria-hidden="true">2.1.1.</strong> Répertoire de travail</a></li><li><a href="informatique/mise_en_place/compilation.html"><strong aria-hidden="true">2.1.2.</strong> Compilation</a></li><li><a href="informatique/mise_en_place/ide.html"><strong aria-hidden="true">2.1.3.</strong> IDE</a></li></ol></li></ol></li><li><a href="elec-soft.html"><strong aria-hidden="true">3.</strong> Electronique Logicielle</a></li><li><ol class="section"><li><a href="tools.html"><strong aria-hidden="true">3.1.</strong> Mise en place</a></li><li><ol class="section"><li><a href="tools/ide.html"><strong aria-hidden="true">3.1.1.</strong> IDE</a></li><li><a href="tools/compile.html" class="active"><strong aria-hidden="true">3.1.2.</strong> Compilation</a></li><li><a href="tools/repo.html"><strong aria-hidden="true">3.1.3.</strong> Répertoire de travail</a></li></ol></li><li><a href="learn_rust.html"><strong aria-hidden="true">3.2.</strong> Apprendre Rust</a></li><li><a href="repo.html"><strong aria-hidden="true">3.3.</strong> Explication détaillée</a></li><li><ol class="section"><li><a href="explications/structure.html"><strong aria-hidden="true">3.3.1.</strong> Structure générale</a></li><li><a href="explication/communication.html"><strong aria-hidden="true">3.3.2.</strong> Communication</a></li><li><a href="explications/librobot.html"><strong aria-hidden="true">3.3.3.</strong> librobot</a></li><li><a href="explications/elec.html"><strong aria-hidden="true">3.3.4.</strong> elec</a></li></ol></li></ol></li><li><a href="elec-mat.html"><strong aria-hidden="true">4.</strong> Electronique matérielle</a></li><li><ol class="section"><li><a href="elec-mat/tools.html"><strong aria-hidden="true">4.1.</strong> Mise en place</a></li><li><a href="elec-mat/kicad.html"><strong aria-hidden="true">4.2.</strong> Guide d'utilisation de Kicad</a></li><li><a href="elec-mat/production.html"><strong aria-hidden="true">4.3.</strong> Faire tirer sa carte</a></li><li><a href="elec-mat/pcb.html"><strong aria-hidden="true">4.4.</strong> Les différents circuits du Club Robot</a></li><li><ol class="section"><li><a href="elec-mat/power.html"><strong aria-hidden="true">4.4.1.</strong> Puissance</a></li><li><a href="elec-mat/serial.html"><strong aria-hidden="true">4.4.2.</strong> Bus Série</a></li><li><a href="elec-mat/motor.html"><strong aria-hidden="true">4.4.3.</strong> Moteurs &amp; Pont H</a></li><li><a href="elec-mat/servos.html"><strong aria-hidden="true">4.4.4.</strong> ServoMoteurs</a></li><li><a href="elec-mat/brushless.html"><strong aria-hidden="true">4.4.5.</strong> Moteurs Brushless</a></li><li><a href="elec-mat/can.html"><strong aria-hidden="true">4.4.6.</strong> Bus CAN</a></li><li><a href="elec-mat/laser.html"><strong aria-hidden="true">4.4.7.</strong> Capteur Laser</a></li><li><a href="elec-mat/pull.html"><strong aria-hidden="true">4.4.8.</strong> PullUp &amp; PullDown</a></li></ol></li><li><a href="elec-mat/tips&tricks.html"><strong aria-hidden="true">4.5.</strong> Conseils &amp; Astuces pour réussir sa carte</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Documentation Club Robot Insa Toulouse</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="tools/compile.html#compilation" id="compilation"><h1>Compilation</h1></a>
+<p>Dans cette section nous allons te guider pour l'installation de tous les outils qui te permettront de compiler le projet pour le microcontrôleur.</p>
+<a class="header" href="tools/compile.html#outils-génériques" id="outils-génériques"><h1>Outils génériques</h1></a>
+<p>Nous allons tout d'abord installer les outils suivantes :</p>
+<ul>
+<li><code>git</code> : gestionnaire de versions pour le code</li>
+<li><code>gdb-arm-none-eabi</code> : <code>gdb</code> est un débuggeur, on installe ici la version pour l'architecture <code>arm</code> sans os (<code>none</code>). Tu trouveras plus d'informations sur gdb par <a href="https://fr.wikipedia.org/wiki/GNU_Debugger">ici</a>. Pour les notions d'architecture, tu peux toujours lire la page sur l'<a href="https://fr.wikipedia.org/wiki/Architecture_de_processeur">architecture matérielle</a> sur wikipédia.</li>
+<li><code>gcc-arm-none-eabi</code> : <code>gcc</code> est un compilateur pour le langage C. Le paquet du compilateur vient aussi avec un linker (ou <a href="https://fr.wikipedia.org/wiki/%C3%89dition_de_liens">éditeur de lien</a>) qui est nécessaire pour obtenir un exécutable final. On installe là le paquet qui nous fournit un éditeur de lien pour l'architecture du microcontrôleur (<em>arm</em>).</li>
+<li><code>gcc-6-multilib</code> ou <code>gcc-7-multilib</code> : on a aussi besoin de l'éditeur de lien pour notre architecture d'ordinateur.</li>
+<li><code>openocd</code> : cet outil permet de communiquer avec le microcontrôleur.</li>
+</ul>
+<p>Pour cela, il te suffit d'exécuter dans un terminal :</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install git gdb-arm-none-eabi gcc-arm-none-eabi gcc-6-multilib openocd
+</code></pre>
+<p>La première commande mets à jour les paquets disponibles, la deuxième les installe.</p>
+<a class="header" href="tools/compile.html#customisation-de-gdb" id="customisation-de-gdb"><h2>Customisation de gdb</h2></a>
+<p>Bien que très puissant, gdb propose une interface d'un autre siècle. On va rendre cette interface plus agréable.</p>
+<ol>
+<li>On récupère un fichier tout fait qui rend l'interface de gdb supportable :
+<pre><code class="language-bash">wget -P ~ git.io/.gdbinit
+</code></pre>
+</li>
+<li>On autorise le chargement de ce fichier par gdb :
+<pre><code class="language-bash">echo &quot;set auto-load safe-path /&quot; &gt;&gt; ~/.gdbinit
+</code></pre>
+</li>
+</ol>
+<a class="header" href="tools/compile.html#rust" id="rust"><h1>Rust</h1></a>
+<p>Pour installer rust, tu peux te référer aux instructions sur <a href="https://rustup.rs">rustup.rs</a>. Les paramètres par défaut sont très bien.
+Si tu as bien installé Rust, quand tu ouvres un nouveau terminal et que tu tapes :</p>
+<pre><code class="language-bash">rustc --version
+</code></pre>
+<p>Il devrait s'afficher un texte qui ressemble à ça :</p>
+<pre><code class="language-bash">rustc 1.25.0-nightly (b5392f545 2018-01-08)
+</code></pre>
+<a class="header" href="tools/compile.html#utilitaires" id="utilitaires"><h1>Utilitaires</h1></a>
+<p>Pour travailler plus efficacement, nous allons aussi installer quelques outils.</p>
+<a class="header" href="tools/compile.html#obligatoire--rustfmt" id="obligatoire--rustfmt"><h2>Obligatoire : rustfmt</h2></a>
+<p>Dans un projet informatique, plusieurs personnes ont des conventions d'alignement du texte différent, différentes manières d'aller à la ligne dans les déclarations, etc.
+Dans le but d'uniformiser le code produit par tout le monde, on utilise un outil <a href="https://github.com/rust-lang-nursery/rustfmt">rustfmt</a> qui va venir formatter le code. Plus besoin de se prendre la tête avec l'indentation ou les retours à la ligne dans les gros appels de fonctions : on lance <code>rustfmt</code> et le code est formaté.</p>
+<p>Cet outil est <strong>obligatoire</strong>, autrement ton installation ne fonctionnera pas. Pour l'installer il suffit de taper dans un terminal :</p>
+<pre><code class="language-bash">rustup component add rustfmt-preview
+</code></pre>
+<a class="header" href="tools/compile.html#optionnel--cargo-edit" id="optionnel--cargo-edit"><h2>Optionnel : cargo-edit</h2></a>
+<p>L'outil <code>cargo-edit</code> permet d'ajouter facilement des librairies depuis la ligne de commande dans un projet. Pour plus d'informations tu peux aller lire la description de l'outil par <a href="https://crates.io/crates/cargo-edit">ici</a>.</p>
+<pre><code class="language-bash">cargo install cargo-edit
+</code></pre>
+<a class="header" href="tools/compile.html#optionnel-cargo-clone" id="optionnel-cargo-clone"><h2>Optionnel cargo-clone</h2></a>
+<p>L'outil <code>cargo-clone</code> permet de récuperer le code source de n'importe quelle librairie disponible sur <a href="https://crates.io">crates.io</a> en une ligne de commande.</p>
+<pre><code class="language-bash">cargo install cargo-clone
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="tools/ide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="tools/repo.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="tools/ide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="tools/repo.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        
+        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+    </body>
+</html>

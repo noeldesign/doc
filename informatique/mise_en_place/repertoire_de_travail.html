@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Répertoire de travail - Documentation Club Robot Insa Toulouse</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <base href="../../">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="_FontAwesome/css/font-awesome.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+
+    </head>
+    <body class="light">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="info.html"><strong aria-hidden="true">2.</strong> Informatique</a></li><li><ol class="section"><li><a href="informatique/mise_en_place.html"><strong aria-hidden="true">2.1.</strong> Mise en place</a></li><li><ol class="section"><li><a href="informatique/mise_en_place/repertoire_de_travail.html" class="active"><strong aria-hidden="true">2.1.1.</strong> Répertoire de travail</a></li><li><a href="informatique/mise_en_place/compilation.html"><strong aria-hidden="true">2.1.2.</strong> Compilation</a></li><li><a href="informatique/mise_en_place/ide.html"><strong aria-hidden="true">2.1.3.</strong> IDE</a></li></ol></li></ol></li><li><a href="elec-soft.html"><strong aria-hidden="true">3.</strong> Electronique Logicielle</a></li><li><ol class="section"><li><a href="tools.html"><strong aria-hidden="true">3.1.</strong> Mise en place</a></li><li><ol class="section"><li><a href="tools/ide.html"><strong aria-hidden="true">3.1.1.</strong> IDE</a></li><li><a href="tools/compile.html"><strong aria-hidden="true">3.1.2.</strong> Compilation</a></li><li><a href="tools/repo.html"><strong aria-hidden="true">3.1.3.</strong> Répertoire de travail</a></li></ol></li><li><a href="learn_rust.html"><strong aria-hidden="true">3.2.</strong> Apprendre Rust</a></li><li><a href="repo.html"><strong aria-hidden="true">3.3.</strong> Explication détaillée</a></li><li><ol class="section"><li><a href="explications/structure.html"><strong aria-hidden="true">3.3.1.</strong> Structure générale</a></li><li><a href="explication/communication.html"><strong aria-hidden="true">3.3.2.</strong> Communication</a></li><li><a href="explications/librobot.html"><strong aria-hidden="true">3.3.3.</strong> librobot</a></li><li><a href="explications/elec.html"><strong aria-hidden="true">3.3.4.</strong> elec</a></li></ol></li></ol></li><li><a href="elec-mat.html"><strong aria-hidden="true">4.</strong> Electronique matérielle</a></li><li><ol class="section"><li><a href="elec-mat/tools.html"><strong aria-hidden="true">4.1.</strong> Mise en place</a></li><li><a href="elec-mat/kicad.html"><strong aria-hidden="true">4.2.</strong> Guide d'utilisation de Kicad</a></li><li><a href="elec-mat/production.html"><strong aria-hidden="true">4.3.</strong> Faire tirer sa carte</a></li><li><a href="elec-mat/pcb.html"><strong aria-hidden="true">4.4.</strong> Les différents circuits du Club Robot</a></li><li><ol class="section"><li><a href="elec-mat/power.html"><strong aria-hidden="true">4.4.1.</strong> Puissance</a></li><li><a href="elec-mat/serial.html"><strong aria-hidden="true">4.4.2.</strong> Bus Série</a></li><li><a href="elec-mat/motor.html"><strong aria-hidden="true">4.4.3.</strong> Moteurs &amp; Pont H</a></li><li><a href="elec-mat/servos.html"><strong aria-hidden="true">4.4.4.</strong> ServoMoteurs</a></li><li><a href="elec-mat/brushless.html"><strong aria-hidden="true">4.4.5.</strong> Moteurs Brushless</a></li><li><a href="elec-mat/can.html"><strong aria-hidden="true">4.4.6.</strong> Bus CAN</a></li><li><a href="elec-mat/laser.html"><strong aria-hidden="true">4.4.7.</strong> Capteur Laser</a></li><li><a href="elec-mat/pull.html"><strong aria-hidden="true">4.4.8.</strong> PullUp &amp; PullDown</a></li></ol></li><li><a href="elec-mat/tips&tricks.html"><strong aria-hidden="true">4.5.</strong> Conseils &amp; Astuces pour réussir sa carte</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Documentation Club Robot Insa Toulouse</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="informatique/mise_en_place/repertoire_de_travail.html#répertoire-de-travail" id="répertoire-de-travail"><h1>Répertoire de travail</h1></a>
+<p>La première étape consiste à récupérer l'ensemble du projet informatique du Club.</p>
+<p>On utilise un <a href="https://fr.wikipedia.org/wiki/Logiciel_de_gestion_de_versions">gestionnaire de versions</a> pour manager l'ensemble du code : <a href="https://git-scm.com/">git</a>.</p>
+<p>Ce choix a de très nombreux avantages :</p>
+<ul>
+<li>L'évolution de tout le code est sauvegardée donc on peut rappeler une version antérieure d'un fichier à tout moment</li>
+<li>Si on perd des fichiers ou que l'on se trompe, on peut facilement revenir à un état stable</li>
+<li><code>git</code> permets de collaborer sur un même code, c'est à dire que plusieurs développeurs peuvent participer au code et le logiciel s'occupe de rassembler l'ensemble des modifications</li>
+<li>On peut profiter de tous ces avantages avec très peu de travail supplémentaire</li>
+</ul>
+<a class="header" href="informatique/mise_en_place/repertoire_de_travail.html#clonage-du-dépôt" id="clonage-du-dépôt"><h1>Clonage du dépôt</h1></a>
+<a class="header" href="informatique/mise_en_place/repertoire_de_travail.html#installation-de-git" id="installation-de-git"><h2>Installation de <code>git</code></h2></a>
+<p>Afin de bénéficier de tous les avantages de <code>git</code>, il n'y a rien de plus simple : il suffit d'exécuter la commande suivante.</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install git
+</code></pre>
+<p><strong><em>Astuce :</em></strong> pour vérifier que l'installation d'une application a bien marché, tu peux appeler la commande <code>which</code> qui te retourne le chemin vers l'exécutable, ou encore l'exécuter avec le flag <code>--version</code> :</p>
+<pre><code class="language-bash">$ which git
+/usr/bin/git
+
+$ git version
+git version 2.11.0
+</code></pre>
+<p><code>git</code> est un logiciel extrêmement pratique une fois qu'on l'a pris en main, alors voici ton premier travail à la maison : <a href="https://try.github.io/levels/1/challenges/1">apprendre à utiliser <code>git</code> en ligne en 15 minutes</a>.</p>
+<a class="header" href="informatique/mise_en_place/repertoire_de_travail.html#téléchargement-du-dépôt" id="téléchargement-du-dépôt"><h2>Téléchargement du dépôt</h2></a>
+<p>A présent, on va <code>clone</code>r le repo info du Club. Il est actuellement privé, donc pense à demander à un membre son accès !</p>
+<p>Je te conseille de te créer un dossier qui va regrouper tous les dépôts du Club, par exemple :</p>
+<pre><code class="language-bash">mkdir -p ~/Programs/ClubRobot
+cd ~/Programs/ClubRobot
+</code></pre>
+<a class="header" href="informatique/mise_en_place/repertoire_de_travail.html#méthode-simple-avec-https" id="méthode-simple-avec-https"><h3>Méthode simple avec HTTPS</h3></a>
+<p>Le clonage en HTTPS est le plus simple et le plus couramment utilisé. Il ne demande que le lien vers le dépôt pour le cloner, et lorsqu'une authentification est requise (clone d'un dépôt privé, push, ...) il faut entrer son identifiant du serveur git (dans notre cas, <a href="https://github.com">github.com</a>) ainsi que son mot de passe.</p>
+<p>Voici comment récupérer le code :</p>
+<pre><code class="language-bash">git clone https://&lt;ton_login_github&gt;@github.com/ClubRobotInsat/info.git
+cd info
+</code></pre>
+<a class="header" href="informatique/mise_en_place/repertoire_de_travail.html#méthode-alternative-avec-ssh" id="méthode-alternative-avec-ssh"><h3>Méthode alternative avec SSH</h3></a>
+<p><a href="https://github.com">github.com</a> propose une autre fonctionnalité accéder au serveur par <a href="https://fr.wikipedia.org/wiki/Secure_Shell">SSH</a>. La mise en place de cette méthode est un peu plus longue que le simple protocole HTTPS, mais ça te permettra de t'affranchir de devoir entrer ton mot de passe et ton identifiant à chaque intéraction avec le serveur.</p>
+<p>Je te laisse suivre les <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">instructions détaillées</a> pour ajouter la clef SSH sur github.</p>
+<p>Enfin, voici comment récupérer le code :</p>
+<pre><code class="language-bash">git clone git@github.com:ClubRobotInsat/info.git
+cd info
+</code></pre>
+<hr />
+<p>Félicitations, te voilà possesseur de tout le savoir informatique du Club !</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="informatique/mise_en_place.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="informatique/mise_en_place/compilation.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="informatique/mise_en_place.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="informatique/mise_en_place/compilation.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+        
+        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+    </body>
+</html>
