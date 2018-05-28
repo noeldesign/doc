@@ -1,6 +1,7 @@
 <p align="center">
 <img src="assets/logo.png">
-</p>
+</p>(https://clubrobotinsat.github.io/doc/)
+
 
 [![Travis](https://api.travis-ci.org/ClubRobotInsat/librobot.svg?branch=master)](https://travis-ci.org/ClubRobotInsat/doc)
 # [La documentation du club robot](https://clubrobotinsat.github.io/doc/)
